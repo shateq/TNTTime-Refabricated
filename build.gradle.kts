@@ -6,7 +6,7 @@ plugins {
 
 fun p(key: String): String = properties[key] as String
 
-version = "1.4.0"
+version = "1.4.1"
 base.archivesName.set("${rootProject.name}-mc${p("minecraft")}")
 description = "A countdown to the detonation of a TNT."
 
@@ -56,9 +56,9 @@ modrinth {
     projectId.set("tnttime")
     versionNumber.set("mc$version")
 
-    versionName.set("Tnt Time $version for 1.21.x")
+    versionName.set("Tnt Time $version for 1.21.4")
 
     versionType.set("release")
-    gameVersions.addAll("1.21", "1.21.1")
+    gameVersions.addAll("1.21.4")
     uploadFile.set(tasks["remapJar"])
 }
